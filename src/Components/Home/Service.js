@@ -1,10 +1,16 @@
 import React from 'react';
 
-const Service = () => {
+const Service = ({ service }) => {
     return (
-        <div>
-            <h2>Service</h2>
-        </div>
+            <div class="card lg:max-w-lg bg-base-100 shadow-xl image-full">
+                <figure><img src={service.img} alt="Shoes" /></figure>
+                <div class="card-body">
+                    <h2 class="card-title">{service.name}</h2>
+                    <p>{service.description}</p>
+                    
+                </div>
+            </div>
+        
     );
 };
 

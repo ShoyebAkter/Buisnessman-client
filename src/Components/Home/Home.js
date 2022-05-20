@@ -1,10 +1,10 @@
 import React from 'react';
 import Banner from './Banner';
+import BookFood from './BookFood';
 import Contact from './Contact';
 import Footer from './Footer';
 import Info from './Info';
 import Services from './Services';
-import BookAppointment from './BookAppointment';
 import Testomonial from './Testomonials';
 
 
@@ -14,7 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <Info></Info>
             <Services></Services>
-            <BookAppointment></BookAppointment>
+            <BookFood></BookFood>
             <Testomonial></Testomonial>
             <Contact></Contact>
             <Footer></Footer>
