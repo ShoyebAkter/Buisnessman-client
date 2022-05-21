@@ -1,36 +1,20 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import SocialButton from './styled/SocialButton'
-import BrandButton from './styled/BrandButton'
-import SlidingForm from './styled/SlidingForm'
 
 
 const LoginPage = () => {
     return (
-        <SlidingForm>
-    <h1>Sign in</h1>
-    <div>
-      <SocialButton>
-        <FontAwesomeIcon icon={['fab', 'facebook-f']} />
-      </SocialButton>
-      <SocialButton>
-        <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
-      </SocialButton>
-      <SocialButton>
-        <FontAwesomeIcon icon={['fab', 'google']} />
-      </SocialButton>
-    </div>
-    <p>or use your account</p>
-    <form>
-      <input placeholder="Email" type="text" />
-      <input placeholder="Password" type="password" />
-    </form>
-    <p>
-      <a href="#">Forgot your password?</a>
-    </p>
-    <BrandButton>Sign in</BrandButton>
-  </SlidingForm>
+        <div className="form-container sign-in-container">
+                <form className="form" action="#">
+                    <h1 className="form-title">Welcome Back!</h1>
+
+                    <input type="email" placeholder="email" />
+                    <input type="password" placeholder="password" />
+
+                    <button className="form-button">sign in</button>
+                    <a className="find-password" href="#">Forgot Password</a>
+                </form>
+            </div>
     );
 };
 

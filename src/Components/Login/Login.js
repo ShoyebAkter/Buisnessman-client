@@ -1,26 +1,32 @@
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
-import './Login.css'
-import theme from '../../theme';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-    faFacebookF,
-    faLinkedinIn,
-    faGoogle
-} from '@fortawesome/free-brands-svg-icons'
+import React, { useState } from 'react';
 import LoginPage from './LoginPage';
-library.add(faFacebookF, faLinkedinIn, faGoogle)
-
+import Overlay from './Overlay';
+import Register from './Register';
+import './Login.css'
 
 const Login = () => {
+    const [rightPanelActive,setRightPanelActive]=useState(false);
+    const handleClickSignUpButton = () =>{
+        setRightPanelActive(true);
+    };
+
+    const handleClickSignInButton = () =>{
+        setRightPanelActive(false);
+    };
     return (
-        <div>
-            <ThemeProvider theme={theme}>
-
-                <LoginPage />
-
-            </ThemeProvider>
-        </div>
+        <div className="App">
+                <div
+                    className={`container ${rightPanelActive ? `right-panel-active` : ``}`}
+                    id="container"
+                >
+                    <Register />
+                    <LoginPage />
+                    <Overlay
+                        handleClickSignInButton={handleClickSignInButton}
+                        handleClickSignUpButton={handleClickSignUpButton}
+                    />
+                </div>
+            </div>
     );
 };
 
