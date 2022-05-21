@@ -7,7 +7,7 @@ const Service = ({ service, setFood }) => {
             <div className="card-body text-center">
                 <h2 className="text-xl font-bold text-secondary">{name}</h2>
                 <p>{
-                    slots.length > 0
+                    available > 0
                         ? <span>{slots[0]}</span>
                         : <span className='text-red-500'>Try another date.</span>
                 }</p>
