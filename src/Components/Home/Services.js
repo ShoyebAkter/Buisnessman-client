@@ -28,7 +28,7 @@ const Services = () => {
         },
         {
             _id: 4,
-            name: 'Fish for Lunch',
+            name: 'Beef stroganoff',
             description: 'Editorial, Food & Drink',
             img: food4
         },
@@ -40,7 +40,7 @@ const Services = () => {
         },
         {
             _id: 6,
-            name: 'Fish for Lunch',
+            name: 'Hearty beef casserole',
             description: 'Editorial, Food & Drink',
             img: food6
         },
